@@ -1,0 +1,49 @@
+NETWORK_PASSPHRASE= "Public Global Stellar Network ; September 2015"
+ACCOUNTS = [ "GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ", "GDNT36Y4B756BDVLI6ZP4GQ4DFC7JMSGTPUF7WGAHGUCHB5XWT3EXSFL",]
+TRANSFER_SERVER = "https://ngnc.onrender.com/sep24"
+TRANSFER_SERVER_SEP0024 = "https://ngnc.onrender.com/sep24"
+WEB_AUTH_ENDPOINT = "https://ngnc.onrender.com/auth"
+SIGNING_KEY = "GBXLL53FML3D3KK7HTZNIVGHZ7YX2D74EJW457MI26KHI3BEMFI7MS57"
+[[PRINCIPALS]]
+name = "Evarist Emmanuel"
+email = "engremmanuelec@gmail.com"
+
+[[PRINCIPALS]]
+name = "Tomisin Leshi"
+email = "tomisinleshi@gmail.com"
+
+[[CURRENCIES]]
+code = "NGNC"
+issuer = "GASBV6W7GGED66MXEVC7YZHTWWYMSVYEY35USF2HJZBLABLYIFQGXZY6"
+name = "NGNC Coin"
+desc = "Asset backed token pegged 1:1 to Nigerian Naira"
+display_decimals = 2
+is_asset_anchored = "true"
+is_unlimited = "true"
+anchor_asset_type = "fiat"
+anchor_asset = "NGN"
+redemption_instructions = "contact Authorized Dealers or signup with KYC info on LINK"
+status = "live"
+image = "https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/61961ce43c530394bcb05349_NGRC.png"
+
+[[CURRENCIES]]
+code = "NGNX"
+issuer = "GASXUXA72ERIKKGP437GFJY5RXH7CC7TX7DAT2IFXU3K7MJ6ABOC74YX"
+name = "NGNX Coin"
+display_decimals = 2
+is_asset_anchored = "true"
+is_unlimited = "true"
+anchor_asset_type = "fiat"
+anchor_asset = "NGN"
+status = "test"
+
+[DOCUMENTATION]
+ORG_NAME = "LINK.IO LTD."
+ORG_DBA = "LINK"
+ORG_URL = "https://www.linkio.africa/"
+ORG_LOGO = "https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/60b623a4d06b3b67a49c9e82_WEBCLIP.png"
+ORG_DESCRIPTION = "LINK is a Global Cross Border payments platform for the next billion Africans, providing services in a Faster and Cheaper way"
+ORG_PHYSICAL_ADDRESS = "2 Fredrick Street, Kings Cross, London, United Kingdom WC1X 0ND"
+ORG_TWITTER = "link_io"
+ORG_OFFICIAL_EMAIL = "support@linkupio.com"
+ORG_GITHUB = "linkioafrica"

@@ -35,8 +35,11 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
+
+# Production
+# DEBUG = False
+# ALLOWED_HOSTS = ["ngnc.onrender.com","ngnc.online", "linkio.africa","localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -73,6 +76,11 @@ CORS_ORIGIN_ALLOW_ALL= True
 FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 SESSION_COOKIE_SECURE = True
 
+# SECURE_HSTS_SECONDS = 1
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_PRELOAD = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

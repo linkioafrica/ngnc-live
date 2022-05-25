@@ -32,14 +32,13 @@ if os.path.exists(env_file):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 # ALLOWED_HOSTS = []
 
 # Production
 DEBUG = False
-ALLOWED_HOSTS = ["link-oa0b.onrender.com","ngnc.online","localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["linkio.onrender.com","ngnc.online","localhost", "127.0.0.1"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -69,8 +68,6 @@ MIDDLEWARE = [
     'polaris.middleware.TimezoneMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS=True
-CORS_ORIGIN_ALLOW_ALL= True
 FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 SESSION_COOKIE_SECURE = True
 

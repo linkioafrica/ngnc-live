@@ -7,9 +7,13 @@ class AnchorConfig(AppConfig):
         from polaris.integrations import register_integrations
         
         from .integrations import (
-            toml_contents,
+            # toml_contents,
+            AnchorDeposit,
+            AnchorWithdraw,
         )
 
         register_integrations(
-            toml = toml_contents,
+            # toml = toml_contents,
+            deposit=AnchorDeposit(),
+            withdrawal=AnchorWithdraw(),
         )

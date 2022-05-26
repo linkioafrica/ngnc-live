@@ -1,8 +1,8 @@
 NETWORK_PASSPHRASE= "Public Global Stellar Network ; September 2015"
 ACCOUNTS = [ "GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ", "GDNT36Y4B756BDVLI6ZP4GQ4DFC7JMSGTPUF7WGAHGUCHB5XWT3EXSFL",]
-TRANSFER_SERVER = "https://ngnc.onrender.com/sep24"
-TRANSFER_SERVER_SEP0024 = "https://ngnc.onrender.com/sep24"
-WEB_AUTH_ENDPOINT = "https://ngnc.onrender.com/auth"
+TRANSFER_SERVER = "https://linkio.onrender.com/sep24"
+TRANSFER_SERVER_SEP0024 = "https://linkio.onrender.com/sep24"
+WEB_AUTH_ENDPOINT = "https://linkio.onrender.com/auth"
 SIGNING_KEY = "GBXLL53FML3D3KK7HTZNIVGHZ7YX2D74EJW457MI26KHI3BEMFI7MS57"
 [[PRINCIPALS]]
 name = "Evarist Emmanuel"

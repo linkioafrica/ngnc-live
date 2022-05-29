@@ -87,7 +87,7 @@ class AnchorWithdraw(WithdrawalIntegration):
         if request.query_params.get("step"):
           raise NotImplementedError()
 
-        ownUrl = "http://localhost:3000/stellar/withdrawal/auth"
+        ownUrl = "http://localhost:3000/stellar/withdrawal-auth"
         url = request.build_absolute_uri()
         parsed_url = urlparse(url)
         ownUrl += "?" if parsed_url.query else "&"

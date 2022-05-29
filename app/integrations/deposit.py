@@ -94,7 +94,7 @@ class AnchorDeposit(DepositIntegration):
         if request.query_params.get("step"):
           raise NotImplementedError()
 
-        ownUrl = "http://localhost:3000/stellar/deposit/auth"
+        ownUrl = "http://localhost:3000/stellar/deposit-auth"
         url = request.build_absolute_uri()
         parsed_url = urlparse(url)
         ownUrl += "?" if parsed_url.query else "&"

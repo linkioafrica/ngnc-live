@@ -38,7 +38,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # Production
 DEBUG = False
-ALLOWED_HOSTS = ["linkio.onrender.com","ngnc.online","localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["linkio.onrender.com","ngnc.online","216.24.57.253:443", "35.160.120.126", "127.0.0.1"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -75,7 +75,7 @@ SECURE_HSTS_SECONDS = 1
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 CSRF_COOKIE_SECURE = True
-# SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

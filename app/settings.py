@@ -15,6 +15,9 @@ import warnings
 from django.test.utils import ignore_warnings
 import os
 import environ
+import warnings
+
+warnings.filterwarnings("ignore", message="No directory at", module="whitenoise.base" )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,8 +41,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # Production
 DEBUG = False
-ALLOWED_HOSTS = ["*"]
-# ALLOWED_HOSTS = ["linkio.onrender.com","ngnc.online","216.24.57.253:443", "35.160.120.126", "127.0.0.1"]
+# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["linkio.onrender.com","ngnc.online","216.24.57.253:443", "35.160.120.126", "127.0.0.1"]
 
 # Application definition
 INSTALLED_APPS = [
@@ -81,7 +84,7 @@ CORS_ALLOW_METHODS = [
 'PUT',
 ]
 
-# SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_HSTS_SECONDS = 1
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True

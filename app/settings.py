@@ -41,7 +41,6 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # Production
 DEBUG = False
-# ALLOWED_HOSTS = ["*"]
 ALLOWED_HOSTS = ["linkio.onrender.com","ngnc.online","216.24.57.253:443", "35.160.120.126", "127.0.0.1"]
 
 # Application definition
@@ -75,14 +74,7 @@ MIDDLEWARE = [
 FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOW_METHODS = [
-'DELETE',
-'GET',
-'OPTIONS',
-'PATCH',
-'POST',
-'PUT',
-]
+CORS_ALLOW_METHODS = ['GET','POST']
 
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

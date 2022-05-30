@@ -10,12 +10,10 @@ class AnchorConfig(AppConfig):
             # toml_contents,
             AnchorDeposit,
             AnchorWithdraw,
-            info_integration
         )
 
         register_integrations(
             # toml = toml_contents,
             deposit=AnchorDeposit(),
             withdrawal=AnchorWithdraw(),
-            sep6_info=info_integration,
         )

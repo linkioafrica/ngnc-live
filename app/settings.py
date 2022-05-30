@@ -72,9 +72,11 @@ MIDDLEWARE = [
 ]
 
 FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
-CORS_ORIGIN_ALLOW_ALL = True
 
+CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_METHODS = ['GET','POST']
+CORS_ALLOWED_ORIGINS = ["linkio.onrender.com","ngnc.online","216.24.57.253:443", "35.160.120.126", "127.0.0.1"]
+
 
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

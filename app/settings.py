@@ -36,11 +36,11 @@ if os.path.exists(env_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 # ALLOWED_HOSTS = []
 
 # Production
-# DEBUG = False
+DEBUG = False
 ALLOWED_HOSTS = ['linkio.onrender.com']
 
 # Application definition

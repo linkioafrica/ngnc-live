@@ -36,12 +36,12 @@ if os.path.exists(env_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 # ALLOWED_HOSTS = []
 
 # Production
-DEBUG = False
-ALLOWED_HOSTS = ["linkio.onrender.com","ngnc.online","216.24.57.253:443", "35.160.120.126", "127.0.0.1"]
+# DEBUG = False
+ALLOWED_HOSTS = ['linkio.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -73,7 +73,7 @@ MIDDLEWARE = [
 
 FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_METHODS = [
 'DELETE',
 'GET',
@@ -93,7 +93,6 @@ CORS_ALLOW_HEADERS = [
 'x-csrftoken',
 'x-requested-with',
 ]
-# CORS_ALLOWED_ORIGINS = ["linkio.onrender.com","ngnc.online","216.24.57.253:443", "35.160.120.126", "127.0.0.1"]
 
 
 SECURE_SSL_REDIRECT = True

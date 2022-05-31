@@ -37,7 +37,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # Production
 DEBUG = False
-ALLOWED_HOSTS = ['linkio.onrender.com']
+ALLOWED_HOSTS = ['ngnc.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [

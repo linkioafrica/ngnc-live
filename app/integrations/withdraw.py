@@ -87,7 +87,7 @@ class AnchorWithdraw(WithdrawalIntegration):
         if request.query_params.get("step"):
           raise NotImplementedError()
 
-        ownUrl = "http://business.ngnc.online/stellar/auth"
+        ownUrl = "https://ngnc.online/stellar/auth"
         url = request.build_absolute_uri()
         parsed_url = urlparse(url)
         ownUrl += "?" if parsed_url.query else "&"

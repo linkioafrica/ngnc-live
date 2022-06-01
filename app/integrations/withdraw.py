@@ -87,12 +87,12 @@ class AnchorWithdraw(WithdrawalIntegration):
         if request.query_params.get("step"):
           raise NotImplementedError()
 
-        ownUrl = "http://localhost:3000/stellar/withdrawal-auth"
+        ownUrl = "http://business.ngnc.online/stellar/auth"
         url = request.build_absolute_uri()
         parsed_url = urlparse(url)
         ownUrl += "?" if parsed_url.query else "&"
 
-        payload = {'asset_code': asset.code, 'transaction_id':transaction.id}
+        payload = {'asset_code': asset.code, 'transaction_id':transaction.id, 'type': 'withdraw'}
         result = urlencode(payload, quote_via=quote_plus)
     
         # The anchor uses a standalone interactive flow

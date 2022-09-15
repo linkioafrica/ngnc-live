@@ -3,7 +3,8 @@ ACCOUNTS = [ "GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ", "GDNT36
 TRANSFER_SERVER = "https://ngnc.onrender.com/sep24"
 TRANSFER_SERVER_SEP0024 = "https://ngnc.onrender.com/sep24"
 WEB_AUTH_ENDPOINT = "https://ngnc.onrender.com/auth"
-SIGNING_KEY = "GBXLL53FML3D3KK7HTZNIVGHZ7YX2D74EJW457MI26KHI3BEMFI7MS57"
+SIGNING_KEY = "GCMCXPYUNAZZ3X3JOGFD2HV4FZNV53TV5SOHRT5RHTUN7CIE37HOUXFD"
+
 [[PRINCIPALS]]
 name = "Evarist Emmanuel"
 email = "engremmanuelec@gmail.com"
@@ -30,6 +31,7 @@ image = "https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/61961ce43c5303
 code = "NGNX"
 issuer = "GASXUXA72ERIKKGP437GFJY5RXH7CC7TX7DAT2IFXU3K7MJ6ABOC74YX"
 name = "NGNX Coin"
+desc = "Asset backed token pegged 1:1 to Nigerian Naira"
 display_decimals = 2
 is_asset_anchored = true
 is_unlimited = true
@@ -40,7 +42,7 @@ status = "test"
 [DOCUMENTATION]
 ORG_NAME = "LINK.IO LTD."
 ORG_DBA = "LINK"
-ORG_URL = "https://www.linkio.africa/"
+ORG_URL = "https://www.linkio.africa"
 ORG_LOGO = "https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/60b623a4d06b3b67a49c9e82_WEBCLIP.png"
 ORG_DESCRIPTION = "LINK is a Global Cross Border payments platform for the next billion Africans, providing services in a Faster and Cheaper way"
 ORG_PHYSICAL_ADDRESS = "2 Fredrick Street, Kings Cross, London, United Kingdom WC1X 0ND"

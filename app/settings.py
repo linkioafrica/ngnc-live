@@ -28,7 +28,6 @@ env_file = os.path.join(BASE_DIR, ".env")
 if os.path.exists(env_file):  
     env.read_env(env_file)
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -68,7 +67,6 @@ MIDDLEWARE = [
 ]
 
 FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
-
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_METHODS = [
 'DELETE',
@@ -78,6 +76,7 @@ CORS_ALLOW_METHODS = [
 'POST',
 'PUT',
 ]
+
 CORS_ALLOW_HEADERS = [
 'accept',
 'accept-encoding',

@@ -16,7 +16,6 @@ class AddressForm(forms.Form):
 class BankAccount(forms.Form):
     account_number = forms.CharField()
     routing_number = forms.CharField() 
-    
 
 class WithdrawForm(TransactionForm):
     """This form accepts the amount to withdraw from the user."""

@@ -99,8 +99,17 @@ class AnchorDeposit(DepositIntegration):
         parsed_url = urlparse(url)
         ownUrl += "?" if parsed_url.query else "&"
 
-        payload = {'asset_code': asset.code, 'transaction_id':transaction.id, 'type': 'deposit'}
+        payload = {'asset_code': asset.code, 'transaction_id':transaction.id, callback: {callback}, 'type': 'deposit'}
         result = urlencode(payload, quote_via=quote_plus)
     
         # The anchor uses a standalone interactive flow
         return (ownUrl + result)
+
+    def after_interactive_flow(
+        self, 
+        request: Request, 
+        transaction: Transaction
+    ):
+        transaction.amount_in = Decimal(request.query_params.get("amount_in"))
+        transaction.status = Transaction.STATUS.pending_user_transfer_start
+        transaction.save()

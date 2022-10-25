@@ -5,7 +5,7 @@ from rest_framework.request import Request
 from polaris.models import Transaction, Asset
 from polaris.templates import Template
 from .forms import DepositForm
-from urllib.parse import (urlparse, urlencode, quote_plus)
+from urllib.parse import (urlparse, parse_qs, urlencode, quote_plus)
 from polaris.integrations import (
     DepositIntegration,
     TransactionForm
@@ -94,12 +94,23 @@ class AnchorDeposit(DepositIntegration):
         if request.query_params.get("step"):
           raise NotImplementedError()
 
-        ownUrl = "https://ngnc.online/stellar/deposit"
+        ownUrl = "http://localhost:3000/stellar/deposit"
+
+        # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()
+        # print("url:", url)
+        
         parsed_url = urlparse(url)
+        # print(parsed_url.query)
+
+        query_result = parse_qs(parsed_url.query)
+
+        token = (query_result['token'][0]) 
+        # print("token:", token)
+
         ownUrl += "?" if parsed_url.query else "&"
 
-        payload = {'type': 'deposit', 'asset_code': asset.code, 'transaction_id':transaction.id, 'callback': callback}
+        payload = {'type': 'deposit', 'asset_code': asset.code, 'transaction_id':transaction.id,'token': token}
         result = urlencode(payload, quote_via=quote_plus)
         # The anchor uses a standalone interactive flow
         return (ownUrl + result)

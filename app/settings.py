@@ -34,9 +34,11 @@ if os.path.exists(env_file):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-# Production
+# Production (In development they should be true)
 DEBUG = False
-ALLOWED_HOSTS = ['anchor.ngnc.online', 'ngnc.online', 'demo-wallet.stellar.org']
+SESSION_COOKIE_SECURE = False
+
+ALLOWED_HOSTS = ['anchor.ngnc.online', 'ngnc.online','localhost']
 
 # Application definition
 INSTALLED_APPS = [
@@ -94,8 +96,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_HSTS_SECONDS = 1
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
-SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

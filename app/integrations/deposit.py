@@ -99,7 +99,7 @@ class AnchorDeposit(DepositIntegration):
         parsed_url = urlparse(url)
         ownUrl += "?" if parsed_url.query else "&"
 
-        payload = {'asset_code': asset.code, 'transaction_id':transaction.id, 'type': 'deposit', 'callback': callback}
+        payload = {'type': 'deposit', 'asset_code': asset.code, 'account': self, 'transaction_id':transaction.id, 'callback': callback}
         result = urlencode(payload, quote_via=quote_plus)
         # The anchor uses a standalone interactive flow
         return (ownUrl + result)

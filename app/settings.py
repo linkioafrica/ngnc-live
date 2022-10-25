@@ -34,8 +34,11 @@ if os.path.exists(env_file):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-# Production (In development they should be true)
+# Production 
 DEBUG = False
+
+# (In development they should be true)
+# DEBUG = True
 
 ALLOWED_HOSTS = ['anchor.ngnc.online', 'ngnc.online','localhost', 'ngnc.onrender.com']
 

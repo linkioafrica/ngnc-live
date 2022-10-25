@@ -37,7 +37,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # Production (In development they should be true)
 DEBUG = True
 
-ALLOWED_HOSTS = ['anchor.ngnc.online', 'ngnc.online','localhost']
+ALLOWED_HOSTS = ['anchor.ngnc.online', 'ngnc.online','localhost', 'ngnc.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [

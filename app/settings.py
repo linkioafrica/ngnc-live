@@ -35,8 +35,7 @@ if os.path.exists(env_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # Production (In development they should be true)
-DEBUG = False
-SESSION_COOKIE_SECURE = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['anchor.ngnc.online', 'ngnc.online','localhost']
 
@@ -91,12 +90,15 @@ CORS_ALLOW_HEADERS = [
 'x-requested-with',
 ]
 
-SECURE_SSL_REDIRECT = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_HSTS_SECONDS = 1
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+
+# SECURE_SSL_REDIRECT = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_HSTS_SECONDS = 1
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_HSTS_PRELOAD = True
+# CSRF_COOKIE_SECURE = True
 
 
 

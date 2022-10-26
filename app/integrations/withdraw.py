@@ -87,6 +87,8 @@ class AnchorWithdraw(WithdrawalIntegration):
         if request.query_params.get("step"):
           raise NotImplementedError()
 
+        ownUrl = "https://ngnc.online/stellar/withdraw"
+        
          # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()
         # print("url:", url)

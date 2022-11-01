@@ -96,7 +96,7 @@ class AnchorWithdraw(WithdrawalIntegration):
         # print("url:", url)
         
         parsed_url = urlparse(url)
-        # print(parsed_url.query)
+        print(parsed_url.query)
 
         query_result = parse_qs(parsed_url.query)
 

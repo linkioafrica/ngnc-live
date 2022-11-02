@@ -103,7 +103,7 @@ SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_SECONDS = 1
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_HTTPONLY = False
-SESSION_COOKIE_DOMAIN = '.ngnc.online'
+SESSION_COOKIE_DOMAIN = 'anchor.ngnc.online', 'ngnc.online'
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")

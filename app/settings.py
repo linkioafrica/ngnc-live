@@ -40,7 +40,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # (In development they should be true)
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.anchor.ngnc.online','localhost','www.ngnc.onrender.com']
+ALLOWED_HOSTS = ['anchor.ngnc.online', 'ngnc.online','localhost', 'ngnc.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -58,7 +58,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    # 'polaris.middleware.PolarisSameSiteMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',

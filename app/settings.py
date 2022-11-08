@@ -97,9 +97,9 @@ SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_HTTPONLY = False
-SESSION_COOKIE_PATH = 'anchor.ngnc.online'
 SESSION_COOKIE_AGE = 300
-# SESSION_COOKIE_DOMAIN = '.ngnc.online'
+SESSION_COOKIE_DOMAIN = 'anchor.ngnc.online'
+
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")

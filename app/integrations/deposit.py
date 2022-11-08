@@ -31,7 +31,6 @@ class AnchorDeposit(DepositIntegration):
         else:
             return None
 
-    
     def content_for_template(
         self,
         request: Request,

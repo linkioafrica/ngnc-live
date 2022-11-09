@@ -73,9 +73,9 @@ MIDDLEWARE = [
 FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 # CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOWED_ORIGINS = [
-    "https://ngnc.online",
-    "http://localhost:8080",
-    "http://localhost:3080",
+    'https://ngnc.online',
+    'http://localhost:8080',
+    'http://localhost:3000',
 ]
 CORS_ALLOW_METHODS = [
 'DELETE',

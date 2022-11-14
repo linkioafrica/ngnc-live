@@ -5,7 +5,7 @@ from rest_framework.request import Request
 from polaris.models import Transaction, Asset
 from polaris.templates import Template
 from .forms import WithdrawForm, ConfirmationForm
-from urllib.parse import (urlparse, urlencode, quote_plus)
+from urllib.parse import (urlparse, parse_qs, urlencode, quote_plus)
 from polaris.integrations import (
   WithdrawalIntegration, 
   TransactionForm 
@@ -96,7 +96,7 @@ class AnchorWithdraw(WithdrawalIntegration):
         # print("url:", url)
         
         parsed_url = urlparse(url)
-        print(parsed_url.query)
+        # print(parsed_url.query)
 
         query_result = parse_qs(parsed_url.query)
 

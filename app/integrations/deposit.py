@@ -50,7 +50,7 @@ class AnchorDeposit(DepositIntegration):
                         "Provide all info enquired below"
                     ),
                     "icon_label": ("NGNC Anchor Deposit"),
-                    "icon_path": "image/NGNC.png"
+                    # "icon_path": "image/NGNC.png"
                 }
         elif  template == Template.MORE_INFO:
             # provides a label for the image displayed at the top of each page
@@ -60,7 +60,7 @@ class AnchorDeposit(DepositIntegration):
                     "If business or recipient doesn’t have, generate one and send"
                 ),
                 "icon_label": ("NGNC Anchor Deposit"),
-                "icon_path": "image/NGNC.png"
+                # "icon_path": "image/NGNC.png"
             }
             return content
   

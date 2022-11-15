@@ -49,16 +49,16 @@ class AnchorWithdraw(WithdrawalIntegration):
                     "guidance": (
                         "Please enter amount you would like to withdraw from wallet"
                     ),
-                    "icon_label": ("NGNX Anchor Withdraw"),
-                    # "icon_path": "image/NGNC.png",
+                    "icon_label": ("NGNC Anchor Withdraw"),
+                    "icon_path": "image/NGNC.png",
                     "show_fee_table": False,
                 }
         elif  template == Template.MORE_INFO:
             # provides a label for the image displayed at the top of each page
             content = {
                 "title": ("Asset Selection Form"),
-                "icon_label": ("NGNX Anchor Withdraw"),
-                # "icon_path": "image/NGNC.png"
+                "icon_label": ("NGNC Anchor Withdraw"),
+                "icon_path": "image/NGNC.png"
             }
             return content
     

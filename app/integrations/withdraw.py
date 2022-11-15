@@ -45,7 +45,7 @@ class AnchorWithdraw(WithdrawalIntegration):
                 return None
             elif isinstance(form, WithdrawForm):
                 return {
-                    "title": ("Witdrawal Transaction Form"),
+                    "title": ("Withdrawal Transaction Form"),
                     "guidance": (
                         "Please enter amount you would like to withdraw from wallet"
                     ),

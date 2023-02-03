@@ -38,7 +38,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # DEBUG = False
 
 # (In development they should be true)
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['anchor.ngnc.online', 'ngnc.online','localhost', 'ngnc.onrender.com']
 

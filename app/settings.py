@@ -40,7 +40,7 @@ DEBUG = False
 # (In development they should be true)
 # DEBUG = True
 
-ALLOWED_HOSTS = ['anchor.ngnc.online', 'ngnc.online','localhost', 'ngnc.onrender.com']
+ALLOWED_HOSTS = ['anchor.ngnc.online','localhost']
 
 # Application definition
 INSTALLED_APPS = [

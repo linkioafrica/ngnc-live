@@ -94,7 +94,6 @@ class AnchorDeposit(DepositIntegration):
           raise NotImplementedError()
 
         # ownUrl = "http://localhost:3000/stellar/deposit"
-
         ownUrl = "https://ngnc.online/stellar/deposit"
 
         # Full interactive url /sep24/transactions/deposit/webapp
@@ -105,12 +104,10 @@ class AnchorDeposit(DepositIntegration):
         # print(parsed_url.query)
 
         query_result = parse_qs(parsed_url.query)
-
         token = (query_result['token'][0]) 
         # print("token:", token)
 
         ownUrl += "?" if parsed_url.query else "&"
-
         payload = {'type': 'deposit', 'asset_code': asset.code, 'transaction_id':transaction.id, 'callback':callback, 'token': token}
         result = urlencode(payload, quote_via=quote_plus)
         # The anchor uses a standalone interactive flow

@@ -1,6 +1,7 @@
 from decimal import Decimal
 from typing import Optional, Dict, List
 from django import forms
+from django.http import JsonResponse
 from rest_framework.request import Request
 from polaris.models import Transaction, Asset
 from polaris.templates import Template
@@ -88,20 +89,16 @@ class AnchorWithdraw(WithdrawalIntegration):
           raise NotImplementedError()
 
         # ownUrl = "http://localhost:3000/stellar/withdraw"
-
         ownUrl = "https://ngnc.online/stellar/withdraw"
         
          # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()
-        # print("url:", url)
         
         parsed_url = urlparse(url)
-        # print(parsed_url.query)
 
         query_result = parse_qs(parsed_url.query)
 
         token = (query_result['token'][0]) 
-        # print("token:", token)
 
         ownUrl += "?" if parsed_url.query else "&"
 
@@ -115,6 +112,15 @@ class AnchorWithdraw(WithdrawalIntegration):
         request: Request, 
         transaction: Transaction
     ):
-        transaction.amount_out = Decimal(request.query_params.get("amount"))
+        transaction_id = (request.query_params.get("transaction_id"))
         transaction.status = Transaction.STATUS.pending_user_transfer_start
+        transaction.amount_out = Decimal(request.query_params.get("amount"))
         transaction.save()
+
+        data = {
+          "type": "Withdrawal",
+          "transaction_id": str(transaction_id),
+          "status": transaction.status,
+          "amount_out": str(transaction.amount_out),
+        }
+        return JsonResponse(data)

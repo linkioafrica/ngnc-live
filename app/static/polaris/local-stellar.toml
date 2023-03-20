@@ -53,3 +53,15 @@ is_unlimited = true
 anchor_asset_type = "fiat"
 anchor_asset = "NGN"
 status = "test"
+
+[[CURRENCIES]]
+code = "CNGN"
+issuer = "GBTP3XKGK2OKIMRJY5H32DEFM3EZPDF24GZVKXFDC5JRNQTKFT7SWENW"
+name = "CNGN Coin"
+desc = "Test Asset backed token pegged 1:1 to Nigerian Naira"
+display_decimals = 2
+is_asset_anchored = true
+is_unlimited = true
+anchor_asset_type = "fiat"
+anchor_asset = "NGN"
+status = "test"

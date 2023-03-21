@@ -102,7 +102,7 @@ class AnchorWithdraw(WithdrawalIntegration):
 
         ownUrl += "?" if parsed_url.query else "&"
 
-        payload = {'type': 'withdraw', 'asset_code': asset.code, 'transaction_id':transaction.id, 'callback': 'postMessage', 'token': token}
+        payload = {'type': 'withdraw', 'asset_code': asset.code, 'transaction_id':transaction.id, 'callback': 'postmessage', 'token': token}
         result = urlencode(payload, quote_via=quote_plus)
         # The anchor uses a standalone interactive flow
         return (ownUrl + result)

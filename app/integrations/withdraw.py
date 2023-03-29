@@ -122,5 +122,6 @@ class AnchorWithdraw(WithdrawalIntegration):
           "transaction_id": str(transaction_id),
           "status": transaction.status,
           "amount_out": str(transaction.amount_out),
+          "amount_in": str(transaction.amount_in),
         }
         return JsonResponse(data)

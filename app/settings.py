@@ -140,11 +140,15 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-   "default": env.db(
-        "DATABASE_URL",
-        default="sqlite:////" + os.path.join(BASE_DIR, "data/db.sqlite3"),
-    )
+DATABASES={
+   'default':{
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
+      'NAME':os.environ['DATABASE_NAME'],
+      'USER':os.environ['DATABASE_USER'],
+      'PASSWORD':os.environ['DATABASE_kEY'],
+      'HOST':os.environ['DATABASE_HOST'],
+      'PORT':os.environ['DATABASE_PORT']
+   }
 }
 
 

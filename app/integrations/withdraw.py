@@ -116,11 +116,3 @@ class AnchorWithdraw(WithdrawalIntegration):
         transaction.status = Transaction.STATUS.pending_user_transfer_start
         transaction.amount_out = Decimal(request.query_params.get("amount"))
         transaction.save()
-
-        data = {
-          "type": "Withdrawal",
-          "transaction_id": str(transaction_id),
-          "status": transaction.status,
-          "amount_out": str(transaction.amount_out),
-        }
-        return JsonResponse(data)

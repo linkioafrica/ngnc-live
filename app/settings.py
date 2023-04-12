@@ -35,10 +35,10 @@ if os.path.exists(env_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # Production 
-# DEBUG = False
+DEBUG = False
 
 # (In development they should be true)
-DEBUG = True
+# DEBUG = True
 
 ALLOWED_HOSTS = ['anchor.ngnc.online','localhost']
 
@@ -142,7 +142,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES={
    'default':{
-      'ENGINE':'django.db.backends.postgresql',
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
       'NAME':os.environ['DATABASE_NAME'],
       'USER':os.environ['DATABASE_USER'],
       'PASSWORD':os.environ['DATABASE_kEY'],

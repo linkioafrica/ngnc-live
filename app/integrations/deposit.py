@@ -121,6 +121,6 @@ class AnchorDeposit(DepositIntegration):
         transaction.amount_in = Decimal(request.query_params.get("amount"))
         transaction.amount_fee = Decimal(request.query_params.get("amount_fee"))
         transaction.amount_out = Decimal(request.query_params.get("amount"))
-        transaction.memo = (request.query_params.get("hashed"))
+        # transaction.memo = (request.query_params.get("hashed"))s
         transaction.stellar_transaction_id = (request.query_params.get("transaction_id"))
         transaction.save()

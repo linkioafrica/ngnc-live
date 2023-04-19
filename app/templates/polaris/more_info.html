@@ -16,7 +16,7 @@
   {% block "info_items" %}
   <div class="info-item">
     <div class="info-label">
-      {% trans "transaction type" %}
+      {% trans "Transaction type" %}
     </div>
     <div class="field-value">
       {% if "deposit" in transaction.kind %}
@@ -29,7 +29,7 @@
 
   <div class="info-item">
     <div class="info-label">
-      {% trans "Transaction ID" %}
+      {% trans "Transaction Id" %}
     </div>
     <div class="field-value">
       {{ transaction.id }}
@@ -54,7 +54,7 @@
   {% if transaction.fee_asset == amount_in_asset %}
   <div class="info-item">
     <div class="info-label">
-      {% trans "fees" %}
+      {% trans "Fees" %}
     </div>
     <div class="field-value">
       {{ amount_fee_symbol }} {{ transaction.amount_fee|floatformat:amount_fee_significant_decimals }}
@@ -131,7 +131,7 @@
 
   <div class="info-item">
     <div class="info-label">
-      {% trans "transaction status" %}
+      {% trans "Transaction status" %}
     </div>
     <div class="field-value">
       {{ transaction.message }}

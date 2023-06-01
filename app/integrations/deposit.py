@@ -96,6 +96,9 @@ class AnchorDeposit(DepositIntegration):
         # ownUrl = "http://localhost:3000/stellar/deposit"
         ownUrl = "https://ngnc.online/stellar/deposit"
 
+        # callback = "http://localhost:3000/stellar/callback"
+        callback = "https://octopus-app-5atot.ondigitalocean.app/api/stellar/callback"
+
         # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()
         
@@ -107,7 +110,7 @@ class AnchorDeposit(DepositIntegration):
 
         ownUrl += "?" if parsed_url.query else "&"
 
-        payload = {'type': 'deposit', 'asset_code': asset.code, 'transaction_id':transaction.id, 'token': token, 'wallet': transaction.stellar_account}
+        payload = {'type': 'deposit', 'asset_code': asset.code, 'transaction_id':transaction.id, 'token': token, 'callbackUrl': callback, 'wallet': transaction.stellar_account}
         result = urlencode(payload, quote_via=quote_plus)
         # The anchor uses a standalone interactive flow
         return (ownUrl + result)
@@ -123,4 +126,5 @@ class AnchorDeposit(DepositIntegration):
         transaction.amount_out = transaction.amount_in - transaction.amount_fee
         transaction.memo_type = (request.query_params.get("memo_type"))
         transaction.memo = (request.query_params.get("hashed"))
+        transaction.on_change_callback = (request.query_params.get("callback"))
         transaction.save()

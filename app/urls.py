@@ -17,8 +17,12 @@ import polaris.urls
 from django.contrib import admin
 from django.urls import path, include
 from django.urls import path
+from .views import callback, onCallback
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include(polaris.urls)),
+    path('callback', onCallback, name='onCallback'),
+    # path('callback', onCallback, name='callback'),
 ]

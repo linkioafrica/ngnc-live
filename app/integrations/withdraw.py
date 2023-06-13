@@ -91,8 +91,8 @@ class AnchorWithdraw(WithdrawalIntegration):
         # ownUrl = "http://localhost:3000/stellar/withdraw"
         ownUrl = "https://ngnc.online/stellar/withdraw"
 
-        # callback = "http://localhost:3000/stellar/callback"
-        callback = "https://octopus-app-5atot.ondigitalocean.app/api/stellar/callback"
+        # callback = "http://localhost:8000/callback"
+        callback = "https://anchor.ngnc.online/callback"
         
          # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()

@@ -92,7 +92,7 @@ class AnchorWithdraw(WithdrawalIntegration):
         ownUrl = "https://ngnc.online/stellar/withdraw"
 
         # callback = "http://localhost:8000/callback"
-        callback = "https://anchor.ngnc.online/callback"
+        # callback = "https://anchor.ngnc.online/callback"
         
          # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()
@@ -105,7 +105,7 @@ class AnchorWithdraw(WithdrawalIntegration):
 
         ownUrl += "?" if parsed_url.query else "&"
 
-        payload = {'type': 'withdraw', 'asset_code': asset.code, 'transaction_id':transaction.id, 'token': token, 'callbackUrl': callback, 'wallet': transaction.stellar_account}
+        payload = {'type': 'withdraw', 'asset_code': asset.code, 'transaction_id':transaction.id, 'token': token, 'callback': callback, 'wallet': transaction.stellar_account}
         result = urlencode(payload, quote_via=quote_plus)
         # The anchor uses a standalone interactive flow
         return (ownUrl + result)
@@ -121,6 +121,6 @@ class AnchorWithdraw(WithdrawalIntegration):
         transaction.amount_out = transaction.amount_in - transaction.amount_fee
         transaction.memo_type = (request.query_params.get("memo_type"))
         transaction.memo = (request.query_params.get("hashed"))
-        transaction.on_change_callback = (request.query_params.get("callback"))
+        # transaction.on_change_callback = (request.query_params.get("callback"))
         transaction.receiving_anchor_account = "GASBV6W7GGED66MXEVC7YZHTWWYMSVYEY35USF2HJZBLABLYIFQGXZY6"
         transaction.save()

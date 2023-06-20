@@ -34,7 +34,7 @@ if os.path.exists(env_file):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-# Production 
+# Production s
 DEBUG = False
 
 # (In development they should be true)
@@ -74,9 +74,7 @@ FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 
 CORS_ALLOW_ALL_ORIGINS  = True
 CORS_ORIGIN_ALLOW_ALL = True
-
 CORS_ALLOW_CREDENTIALS = True
-
 CORS_ALLOWED_ORIGINS = [
     'https://ngnc.online',
 ]
@@ -110,7 +108,6 @@ CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_HTTPONLY = False
 SESSION_COOKIE_AGE = 300
 SESSION_COOKIE_DOMAIN = 'ngnc.online'
-
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")

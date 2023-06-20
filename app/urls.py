@@ -27,4 +27,4 @@ urlpatterns = [
     path("", include(polaris.urls)),
     path('callback', onCallback, name='onCallback'),
     # path('callback', onCallback, name='callback'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]

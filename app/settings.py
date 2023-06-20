@@ -34,11 +34,11 @@ if os.path.exists(env_file):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-# Production s
-DEBUG = False
+# Productions
+# DEBUG = False
 
 # (In development they should be true)
-# DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = ['anchor.ngnc.online','localhost']
 
@@ -102,7 +102,7 @@ CORS_ALLOW_HEADERS = [
 'x-requested-with',
 ]
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_HTTPONLY = False

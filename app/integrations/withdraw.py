@@ -123,6 +123,6 @@ class AnchorWithdraw(WithdrawalIntegration):
         transaction.memo = (request.query_params.get("hashed"))
         transaction.to_address = "bank account"
         transaction.external_transaction_id = (request.query_params.get("externalId"))
-        # transaction.on_change_callback = (request.query_params.get("callback"))
+        transaction.on_change_callback = (request.query_params.get("callback"))
         transaction.receiving_anchor_account = "GASBV6W7GGED66MXEVC7YZHTWWYMSVYEY35USF2HJZBLABLYIFQGXZY6"
         transaction.save()

@@ -35,7 +35,7 @@ if os.path.exists(env_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # Productions
-# DEBUG = Falsssse
+# DEBUG = False
 
 # (In development they should be true)
 DEBUG = True

@@ -1,21 +1,9 @@
 VERSION="2.0.0"
 NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
-ACCOUNTS=["GASBV6W7GGED66MXEVC7YZHTWWYMSVYEY35USF2HJZBLABLYIFQGXZY6","GBTP3XKGK2OKIMRJY5H32DEFM3EZPDF24GZVKXFDC5JRNQTKFT7SWENW"]
-SIGNING_KEY="GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ"
+ACCOUNTS=["GASBV6W7GGED66MXEVC7YZHTWWYMSVYEY35USF2HJZBLABLYIFQGXZY6","GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ"]
 WEB_AUTH_ENDPOINT="https://anchor.ngnc.online/auth"
 TRANSFER_SERVER_SEP0024="https://anchor.ngnc.online/sep24"
-
-[DOCUMENTATION]
-ORG_NAME="LINK.IO LTD."
-ORG_DBA="LINK"
-ORG_URL="https://www.linkio.africa"
-ORG_LOGO="https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/60b623a4d06b3b67a49c9e82_WEBCLIP.png"
-ORG_DESCRIPTION="LINK is building web3 Cross Border payments infrastructure for the next billion Africans, providing services in a Faster and Cheaper way"
-ORG_PHYSICAL_ADDRESS="2 Fredrick Street, Kings Cross, London, United Kingdom WC1X 0ND"
-ORG_OFFICIAL_EMAIL="support@linkio.africa"
-ORG_TWITTER="link_io"
-ORG_GITHUB="linkioafrica"
-ORG_SUPPORT_EMAIL="support@ngnc.online"
+SIGNING_KEY="GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ"
 
 [[PRINCIPALS]]
 name="Evarist Emmanuel"
@@ -53,3 +41,14 @@ redemption_instructions="Going Live Soon on wallets"
 status="live"
 image="https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/63d47feecd015ac50c3896b8_GHSC.png"
 
+[DOCUMENTATION]
+ORG_NAME="LINK.IO LTD."
+ORG_DBA="LINK"
+ORG_URL="https://www.linkio.africa"
+ORG_LOGO="https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/60b623a4d06b3b67a49c9e82_WEBCLIP.png"
+ORG_DESCRIPTION="LINK is building web3 Cross Border payments infrastructure for the next billion Africans, providing services in a Faster and Cheaper way"
+ORG_PHYSICAL_ADDRESS="2 Fredrick Street, Kings Cross, London, United Kingdom WC1X 0ND"
+ORG_OFFICIAL_EMAIL="support@linkio.africa"
+ORG_TWITTER="link_io"
+ORG_GITHUB="linkioafrica"
+ORG_SUPPORT_EMAIL="support@ngnc.online"

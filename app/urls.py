@@ -25,6 +25,4 @@ from .views import callback, onCallback
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include(polaris.urls)),
-    path('callback', onCallback, name='onCallback'),
-    # path('callback', onCallback, name='callback'),
 ]

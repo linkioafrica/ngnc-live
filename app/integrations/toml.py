@@ -3,7 +3,6 @@ from polaris.models import Asset
 
 def toml_contents(request, *args, **kwargs): 
   asset = Asset.objects.first()
-  asset2 = Asset.objects.last()
 
   return {
     "DOCUMENTATION":
@@ -43,16 +42,5 @@ def toml_contents(request, *args, **kwargs):
         "status": "live",
         "image": "https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/61961ce43c530394bcb05349_NGRC.png"
       },
-      {
-        "code": asset2.code,
-        "issuer": asset2.issuer,
-        "name": "NGNX Coin",
-        "display_decimals": 2,
-        "is_asset_anchored": "true",
-        "is_unlimited": "true",
-        "anchor_asset_type": "fiat",
-        "anchor_asset": "NGN",
-        "status": "test",
-      }
     ]
   }

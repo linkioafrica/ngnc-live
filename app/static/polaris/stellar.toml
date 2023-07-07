@@ -1,3 +1,4 @@
+VERSION="2.0.0"
 NETWORK_PASSPHRASE="Public Global Stellar Network ; September 2015"
 ACCOUNTS=["GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ","GBBT5LDLMRE7WEBWBH47ON7P64OCVIBICQGHFEZ7Z65EUDT2JFFHBBRK"]
 SIGNING_KEY="GBCQXM5GLKX4KZFIZ4P4MUEOUMCEMDVMLN6DAQZYUZSIRKULXS3VTPYD"
@@ -39,14 +40,15 @@ status="live"
 image="https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/61961ce43c530394bcb05349_NGRC.png"
 
 [[CURRENCIES]]
-code="LNGN"
-issuer="GBQROSGBINM4IWU2XTKP4OH6K7II557ZXBMC53YCEJNHJKVYCMRAOJZQ"
-name="LNGN Coin"
-desc="Test Asset backed token pegged 1:1 to Nigerian Naira"
+code="GHSC"
+issuer="GASBV6W7GGED66MXEVC7YZHTWWYMSVYEY35USF2HJZBLABLYIFQGXZY6"
+name="GHS Coin"
+desc="Asset anchored token pegged 1:1 to the Ghanaian Cedi"
 display_decimals=2
 is_asset_anchored=true
 is_unlimited=true
 anchor_asset_type="fiat"
-anchor_asset="NGN"
-redemption_instructions="Access through trusted partners and stellar wallets"
-status="test"
+anchor_asset="GHS"
+redemption_instructions="Going Live Soon on wallets"
+status="live"
+image="https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/63d47feecd015ac50c3896b8_GHSC.png"

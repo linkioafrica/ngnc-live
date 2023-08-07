@@ -115,7 +115,7 @@ class AnchorWithdraw(WithdrawalIntegration):
         request: Request, 
         transaction: Transaction
     ):
-        transaction.status = Transaction.STATUS.completed
+        transaction.status = Transaction.STATUS.pending_user_transfer_start
         transaction.amount_in = Decimal(request.query_params.get("amount"))
         transaction.amount_fee = Decimal(request.query_params.get("amount_fee"))
         transaction.amount_out = transaction.amount_in - transaction.amount_fee

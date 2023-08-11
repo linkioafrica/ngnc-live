@@ -90,9 +90,6 @@ class AnchorWithdraw(WithdrawalIntegration):
 
         # ownUrl = "http://localhost:3000/stellar/withdraw"
         ownUrl = "https://ngnc.online/stellar/withdraw"
-
-        # callback = "http://localhost:8000/callback"
-        # callback = "https://anchor.ngnc.online/callback"
         
          # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()
@@ -121,7 +118,7 @@ class AnchorWithdraw(WithdrawalIntegration):
         transaction.amount_out = transaction.amount_in - transaction.amount_fee
         transaction.memo_type = (request.query_params.get("memo_type"))
         transaction.memo = (request.query_params.get("hashed"))
-        transaction.to_address = "bank account"
+        transaction.to_address = (request.query_params.get("account"))
         transaction.external_transaction_id = (request.query_params.get("externalId"))
         transaction.on_change_callback = (request.query_params.get("callback"))
         transaction.receiving_anchor_account = "GASBV6W7GGED66MXEVC7YZHTWWYMSVYEY35USF2HJZBLABLYIFQGXZY6"

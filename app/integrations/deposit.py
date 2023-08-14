@@ -118,6 +118,7 @@ class AnchorDeposit(DepositIntegration):
         transaction: Transaction
     ):
         transaction.status = Transaction.STATUS.pending_user_transfer_start
+        transaction.submission_status = Transaction.SUBMISSION_STATUS.completed
         transaction.amount_in = Decimal(request.query_params.get("amount"))
         transaction.amount_fee = Decimal(request.query_params.get("amount_fee"))
         transaction.amount_out = transaction.amount_in - transaction.amount_fee

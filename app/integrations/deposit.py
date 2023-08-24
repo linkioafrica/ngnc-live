@@ -125,4 +125,5 @@ class AnchorDeposit(DepositIntegration):
         transaction.memo = (request.query_params.get("hashed"))
         transaction.from_address = (request.query_params.get("account"))
         transaction.external_transaction_id = (request.query_params.get("externalId"))
+        transaction.on_change_callback = (request.query_params.get("callback"))
         transaction.save()

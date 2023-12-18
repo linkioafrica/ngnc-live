@@ -35,10 +35,10 @@ if os.path.exists(env_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # Productions
-# DEBUG = False
+DEBUG = False
 
 # (In development they should be true)
-DEBUG = True
+# DEBUG = True
 
 ALLOWED_HOSTS = ['anchor.ngnc.online','localhost']
 
@@ -137,16 +137,23 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES={
-   'default':{
-      'ENGINE':'django.db.backends.postgresql_psycopg2',
-      'NAME':os.environ['DATABASE_NAME'],
-      'USER':os.environ['DATABASE_USER'],
-      'PASSWORD':os.environ['DATABASE_kEY'],
-      'HOST':os.environ['DATABASE_HOST'],
-      'PORT':os.environ['DATABASE_PORT']
-   }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'data/db.sqlite3'),
+    }
 }
+
+# DATABASES={
+#    'default':{
+#       'ENGINE':'django.db.backends.postgresql',
+#       'NAME':os.environ['DATABASE_NAME'],
+#       'USER':os.environ['DATABASE_USER'],
+#       'PASSWORD':os.environ['DATABASE_kEY'],
+#       'HOST':os.environ['DATABASE_HOST'],
+#       'PORT':os.environ['DATABASE_PORT']
+#    }
+# }
 
 
 # Password validation

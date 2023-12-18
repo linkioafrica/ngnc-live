@@ -36,7 +36,6 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # Productions
 DEBUG = False
-
 ALLOWED_HOSTS = ['.anchor.ngnc.online', 'ngnc.onrender.com']
 
 # (In development they should be true)
@@ -73,14 +72,10 @@ MIDDLEWARE = [
 
 FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 
-CORS_ALLOW_ALL_ORIGINS  = True
+# CORS_ALLOW_ALL_ORIGINS  = True
+# CORS_ALLOW_CREDENTIALS = True
+# CORS_ORIGIN_WHITELIST = ('https://ngnc.online',)
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = [
-    'https://ngnc.online',
-]
-
-CORS_ORIGIN_WHITELIST = ('https://ngnc.online',)
 
 CORS_ALLOW_METHODS = [
 'DELETE',
@@ -104,11 +99,12 @@ CORS_ALLOW_HEADERS = [
 ]
 
 SECURE_SSL_REDIRECT = True
+
+SESSION_COOKIE_AGE = 3000
+SESSION_COOKIE_DOMAIN = '.ngnc.online'
+SESSION_COOKIE_HTTPONLY = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_HTTPONLY = False
-SESSION_COOKIE_AGE = 3000
-SESSION_COOKIE_DOMAIN = 'ngnc.online'
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")

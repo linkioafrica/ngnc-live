@@ -39,7 +39,6 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # (In development they should be true)
 DEBUG = True
-
 ALLOWED_HOSTS = ['anchor.ngnc.online','localhost']
 
 # Application definition
@@ -139,7 +138,7 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES={
    'default':{
-      'ENGINE':'django.db.backends.postgresql_psycopg2',
+      'ENGINE':'django.db.backends.postgresql',
       'NAME':os.environ['DATABASE_NAME'],
       'USER':os.environ['DATABASE_USER'],
       'PASSWORD':os.environ['DATABASE_kEY'],

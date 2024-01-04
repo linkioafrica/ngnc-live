@@ -35,7 +35,7 @@ if os.path.exists(env_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # Productions
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['.anchor.ngnc.online', 'ngnc.onrender.com']
 
 # (In development they should be true)

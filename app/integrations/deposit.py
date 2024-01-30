@@ -93,8 +93,8 @@ class AnchorDeposit(DepositIntegration):
         if request.query_params.get("step"):
           raise NotImplementedError()
 
-        # ownUrl = "http://localhost:3000/stellar/deposit"
-        ownUrl = "https://ngnc.online/stellar/deposit"
+        ownUrl = "http://localhost:3000/stellar_deposit_1"
+        # ownUrl = "https://ngnc.online/stellar_deposit_1"
 
         # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()

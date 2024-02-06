@@ -1,6 +1,6 @@
 NETWORK_PASSPHRASE = "Test SDF Network ; September 2015"
-ACCOUNTS = ["GCYUZHQDNR7ZNLSDJJYATWL5NW7PACJN5QRQ2YP3LN2ROJYQ3X6AM6LR"]
-SIGNING_KEY = "GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ"
+ACCOUNTS = ["GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ","GBBT5LDLMRE7WEBWBH47ON7P64OCVIBICQGHFEZ7Z65EUDT2JFFHBBRK"]
+SIGNING_KEY = "GBCQXM5GLKX4KZFIZ4P4MUEOUMCEMDVMLN6DAQZYUZSIRKULXS3VTPYD"
 WEB_AUTH_ENDPOINT = "http://localhost:8000/auth"
 TRANSFER_SERVER = "http://localhost:8000/sep6"
 TRANSFER_SERVER_SEP0024 = "http://localhost:8000/sep24"
@@ -25,10 +25,23 @@ email = "evaristec@linkio.africa"
 name = "Tomisin Leshi"
 email = "tomisinleshi@linkio.africa"
 
+[[CURRENCIES]]
+code = "NGNC"
+issuer = "GB7Z5USHHEGCAMPUXUKNUB6TSHKMXXXA5SJV5FGJNOQZUFFZPACUCA4S"
+name = "NGN Coin"
+desc = "Asset backed token pegged 1:1 to Nigerian Naira"
+display_decimals = 2
+is_asset_anchored = true
+is_unlimited = true
+anchor_asset_type = "fiat"
+anchor_asset = "NGN"
+redemption_instructions = "contact Authorized Dealers or signup with KYC info on LINK"
+status = "live"
+image = "https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/61961ce43c530394bcb05349_NGRC.png"
 
 [[CURRENCIES]]
 code = "CNGN"
-issuer = "GAZFIVWEFYWXXNJAJAW64XFIXFGPMPMWKYLWWRY7DGHLZXSPKWOK5M3U"
+issuer = "GBTP3XKGK2OKIMRJY5H32DEFM3EZPDF24GZVKXFDC5JRNQTKFT7SWENW"
 name = "CNGN Coin"
 desc = "Test Asset backed token pegged 1:1 to Nigerian Naira"
 display_decimals = 2

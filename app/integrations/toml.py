@@ -32,27 +32,27 @@ def toml_contents(request, *args, **kwargs):
       {
         "code": asset.code,
         "issuer": asset.issuer,
-        "name": "CNGN Coin",
+        "name": "NGNC Coin",
         "desc": "Asset backed token pegged 1:1 to Nigerian Naira",
         "display_decimals": 2,
-        "is_asset_anchored": true,
-        "is_unlimited": true,
+        "is_asset_anchored": "true",
+        "is_unlimited": "true",
         "anchor_asset_type": "fiat",
         "anchor_asset": "NGN",
         "redemption_instructions": "contact Authorized Dealers or signup with KYC info on LINK",
-        "status": "test",
+        "status": "live",
         "image": "https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/61961ce43c530394bcb05349_NGRC.png"
       },
-      # {
-      #   "code": asset2.code,
-      #   "issuer": asset2.issuer,
-      #   "name": "CNGN Coin",
-      #   "display_decimals": 2,
-      #   "is_asset_anchored": "true",
-      #   "is_unlimited": "true",
-      #   "anchor_asset_type": "fiat",
-      #   "anchor_asset": "NGN",
-      #   "status": "test",
-      # }
+      {
+        "code": asset2.code,
+        "issuer": asset2.issuer,
+        "name": "NGNX Coin",
+        "display_decimals": 2,
+        "is_asset_anchored": "true",
+        "is_unlimited": "true",
+        "anchor_asset_type": "fiat",
+        "anchor_asset": "NGN",
+        "status": "test",
+      },
     ]
   }

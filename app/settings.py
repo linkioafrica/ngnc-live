@@ -52,8 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "corsheaders",
     "rest_framework",
-    "polaris",
     "app"
+    "polaris",
 ]
 
 MIDDLEWARE = [

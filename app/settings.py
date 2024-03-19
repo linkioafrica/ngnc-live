@@ -35,12 +35,12 @@ if os.path.exists(env_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # Productions
-DEBUG = True
-ALLOWED_HOSTS = ['.anchor.ngnc.online', 'ngnc.onrender.com']
+# DEBUG = True
+# ALLOWED_HOSTS = ['.anchor.ngnc.online', 'ngnc.onrender.com']
 
 # (In development they should be true)
-# DEBUG = True
-# ALLOWED_HOSTS = []
+DEBUG = True
+ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
@@ -98,7 +98,7 @@ CORS_ALLOW_HEADERS = [
 'x-requested-with',
 ]
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 SESSION_COOKIE_AGE = 3000
 SESSION_COOKIE_DOMAIN = '.ngnc.online'
@@ -134,16 +134,23 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES={
-   'default':{
-      'ENGINE':'django.db.backends.postgresql',
-      'NAME':os.environ['DATABASE_NAME'],
-      'USER':os.environ['DATABASE_USER'],
-      'PASSWORD':os.environ['DATABASE_kEY'],
-      'HOST':os.environ['DATABASE_HOST'],
-      'PORT':os.environ['DATABASE_PORT']
-   }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'data/db.sqlite3'),
+    }
 }
+
+# DATABASES={
+#    'default':{
+#       'ENGINE':'django.db.backends.postgresql',
+#       'NAME':os.environ['DATABASE_NAME'],
+#       'USER':os.environ['DATABASE_USER'],
+#       'PASSWORD':os.environ['DATABASE_kEY'],
+#       'HOST':os.environ['DATABASE_HOST'],
+#       'PORT':os.environ['DATABASE_PORT']
+#    }
+# }
 
 
 # Password validation

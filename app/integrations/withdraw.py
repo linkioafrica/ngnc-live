@@ -89,7 +89,7 @@ class AnchorWithdraw(WithdrawalIntegration):
           raise NotImplementedError()
 
         # ownUrl = "http://localhost:3000/stellar/withdraw"
-        ownUrl = "https://ngnc.online/stellar/withdraw"
+        ownUrl = "https://ngnc.online/stellar_withdraw_1"
         
          # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()

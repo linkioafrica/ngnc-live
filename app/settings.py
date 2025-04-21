@@ -25,7 +25,7 @@ PROJECT_ROOT = os.path.dirname(BASE_DIR)
 
 env = environ.Env()
 env_file = os.path.join(BASE_DIR, ".env")
-if os.path.exists(env_file):  
+if os.path.exists(env_file):
     env.read_env(env_file)
 
 # Quick-start development settings - unsuitable for production
@@ -34,13 +34,21 @@ if os.path.exists(env_file):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 
-# Productions
-DEBUG = True
-ALLOWED_HOSTS = ['.anchor.ngnc.online', 'ngnc.onrender.com']
+ENVIRONMENT = os.environ['ENVIRONMENT']
 
-# (In development they should be true)
-# DEBUG = True
-# ALLOWED_HOSTS = []
+
+# Environment-specific DEBUG
+DEBUG = ENVIRONMENT != "production"
+
+if ENVIRONMENT == "production":
+    ALLOWED_HOSTS = [
+        "ngnc.online",
+        "anchor.ngnc.online",
+        "ngnc.onrender.com"
+    ]
+else:  # development
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -61,7 +69,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.middleware.locale.LocaleMiddleware', 
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -98,13 +106,18 @@ CORS_ALLOW_HEADERS = [
 'x-requested-with',
 ]
 
-SECURE_SSL_REDIRECT = True
-
 # SESSION_COOKIE_AGE = 3000
 SESSION_COOKIE_DOMAIN = '.ngnc.online'
 SESSION_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+
+if ENVIRONMENT == "production":
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+else:
+    SECURE_SSL_REDIRECT = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")
@@ -133,24 +146,24 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'data/db.sqlite3'),
-#     }
-# }
-
-DATABASES = {
-   'default':{
-      'ENGINE':'django.db.backends.postgresql',
-      'NAME':os.environ['DATABASE_NAME'],
-      'USER':os.environ['DATABASE_USER'],
-      'PASSWORD':os.environ['DATABASE_kEY'],
-      'HOST':os.environ['DATABASE_HOST'],
-      'PORT':os.environ['DATABASE_PORT']
-   }
-}
+if ENVIRONMENT == "development":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'data/db.sqlite3'),
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('DATABASE_NAME'),
+            'USER': os.environ.get('DATABASE_USER'),
+            'PASSWORD': os.environ.get('DATABASE_KEY'),
+            'HOST': os.environ.get('DATABASE_HOST'),
+            'PORT': os.environ.get('DATABASE_PORT'),
+        }
+    }
 
 
 # Password validation

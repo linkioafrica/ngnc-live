@@ -8,8 +8,8 @@ from polaris.templates import Template
 from .forms import WithdrawForm, ConfirmationForm
 from urllib.parse import (urlparse, parse_qs, urlencode, quote_plus)
 from polaris.integrations import (
-  WithdrawalIntegration, 
-  TransactionForm 
+  WithdrawalIntegration,
+  TransactionForm
 )
 
 class AnchorWithdraw(WithdrawalIntegration):
@@ -62,7 +62,7 @@ class AnchorWithdraw(WithdrawalIntegration):
                 # "icon_path": "image/NGNC.png"
             }
             return content
-    
+
     def after_form_validation(
         self,
         request: Request,
@@ -74,7 +74,7 @@ class AnchorWithdraw(WithdrawalIntegration):
         if isinstance(form, WithdrawForm ):
             # Polaris automatically assigns amount to Transaction.amount_in
            transaction.save()
-    
+
     def interactive_url(
         self,
         request: Request,
@@ -90,26 +90,30 @@ class AnchorWithdraw(WithdrawalIntegration):
 
         # ownUrl = "http://localhost:3000/stellar/withdraw"
         ownUrl = "https://ngnc.online/stellar_withdraw_1"
-        
+
          # Full interactive url /sep24/transactions/deposit/webapp
         url = request.build_absolute_uri()
-        
         parsed_url = urlparse(url)
-
         query_result = parse_qs(parsed_url.query)
 
-        token = (query_result['token'][0]) 
+        token = (query_result['token'][0])
 
         ownUrl += "?" if parsed_url.query else "&"
 
-        payload = {'type': 'withdraw', 'asset_code': asset.code, 'transaction_id':transaction.id, 'token': token, 'callback': callback, 'wallet': transaction.stellar_account}
-        result = urlencode(payload, quote_via=quote_plus)
+        payload = {
+            'type': 'withdraw',
+            'asset_code': asset.code,
+            'transaction_id':transaction.id,
+            'token': token,
+            'callback': callback,
+            'wallet': transaction.stellar_account
+        }
         # The anchor uses a standalone interactive flow
-        return (ownUrl + result)
+        return ownUrl + urlencode(payload, quote_via=quote_plus)
 
     def after_interactive_flow(
-        self, 
-        request: Request, 
+        self,
+        request: Request,
         transaction: Transaction
     ):
         transaction.status = Transaction.STATUS.pending_user_transfer_start

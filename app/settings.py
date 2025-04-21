@@ -38,12 +38,13 @@ ENVIRONMENT = os.environ['ENVIRONMENT']
 
 
 # Environment-specific DEBUG
-# DEBUG = ENVIRONMENT != "production"
-DEBUG = True
+DEBUG = ENVIRONMENT != "production"
+# DEBUG = True
 
 if ENVIRONMENT == "production":
     ALLOWED_HOSTS = [
         "ngnc.online",
+        "www.anchor.ngnc.online",
         "anchor.ngnc.online",
         "ngnc.onrender.com"
     ]

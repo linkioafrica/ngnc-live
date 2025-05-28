@@ -109,8 +109,9 @@ class AnchorDeposit(DepositIntegration):
             'type': 'deposit',
             'asset_code': asset.code,
             'transaction_id':transaction.id,
-            'token': token, 'callback': callback,
-            'wallet': transaction.stellar_account
+            'token': token,
+            'wallet': transaction.stellar_account,
+            'callback': callback
         }
         # The anchor uses a standalone interactive flow
         return ownUrl + urlencode(payload, quote_via=quote_plus)

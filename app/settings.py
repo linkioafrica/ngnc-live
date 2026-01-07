@@ -38,8 +38,10 @@ ENVIRONMENT = os.environ['ENVIRONMENT']
 
 
 # Environment-specific DEBUG
-# DEBUG = ENVIRONMENT != "production"
-DEBUG = True
+if ENVIRONMENT == "production":
+    DEBUG = False
+else:
+    DEBUG = True
 
 if ENVIRONMENT == "production":
     ALLOWED_HOSTS = [

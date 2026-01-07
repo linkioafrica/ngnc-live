@@ -123,7 +123,11 @@ else:
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+if DEBUG:
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+else:
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 ROOT_URLCONF = 'app.urls'
 

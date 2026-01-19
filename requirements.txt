@@ -30,7 +30,7 @@ sqlparse==0.4.4
 stellar-base-sseclient==0.0.21
 stellar-sdk[aiohttp]==10.0.0
 toml==0.10.2
-typeguard==2.13.3
+typeguard>=4.0.0
 urllib3==2.2.3
 whitenoise==6.7.0
 yarl==1.9.4

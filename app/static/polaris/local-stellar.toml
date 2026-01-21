@@ -1,31 +1,9 @@
-
 NETWORK_PASSPHRASE = "Test SDF Network ; September 2015"
 ACCOUNTS = [ "GCYUZHQDNR7ZNLSDJJYATWL5NW7PACJN5QRQ2YP3LN2ROJYQ3X6AM6LR",]
 TRANSFER_SERVER = "http://localhost:8000/sep6"
-TRANSFER_SERVER_SEP0024 = "http://localhost:8000/sep24"
-WEB_AUTH_ENDPOINT = "http://localhost:8000/auth"
 SIGNING_KEY = "GCQLPBWOQ5PAJYEEQBE7GDSY7X3LCYKFEBKOCNF3OUA6F74ORK74HVSQ"
-[[PRINCIPALS]]
-name = "Evarist Emmanuel"
-email = "engremmanuelec@gmail.com"
-
-[[PRINCIPALS]]
-name = "Tomisin Leshi"
-email = "tomisinleshi@gmail.com"
-
-[[CURRENCIES]]
-code = "CNGN"
-issuer = "GAZFIVWEFYWXXNJAJAW64XFIXFGPMPMWKYLWWRY7DGHLZXSPKWOK5M3U"
-name = "CNGN Coin"
-desc = "Asset backed token pegged 1:1 to Nigerian Naira"
-display_decimals = 2
-is_asset_anchored = "true"
-is_unlimited = "true"
-anchor_asset_type = "fiat"
-anchor_asset = "NGN"
-redemption_instructions = "contact Authorized Dealers or signup with KYC info on LINK"
-status = "test"
-image = "https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/61961ce43c530394bcb05349_NGRC.png"
+WEB_AUTH_ENDPOINT = "http://localhost:8000/auth"
+TRANSFER_SERVER_SEP0024 = "http://localhost:8000/sep24"
 
 [DOCUMENTATION]
 ORG_NAME = "LINK.IO LTD."
@@ -37,3 +15,25 @@ ORG_PHYSICAL_ADDRESS = "2 Fredrick Street, Kings Cross, London, United Kingdom W
 ORG_TWITTER = "link_io"
 ORG_OFFICIAL_EMAIL = "support@linkio.africa"
 ORG_GITHUB = "linkioafrica"
+
+[[PRINCIPALS]]
+name = "Evarist Emmanuel"
+email = "engremmanuelec@gmail.com"
+
+[[PRINCIPALS]]
+name = "Tomisin Leshi"
+email = "tomisinleshi@gmail.com"
+
+[[CURRENCIES]]
+code = "NGNC"
+issuer = "GAZFIVWEFYWXXNJAJAW64XFIXFGPMPMWKYLWWRY7DGHLZXSPKWOK5M3U"
+name = "NGN Coin"
+desc = "Asset backed token pegged 1:1 to Nigerian Naira"
+display_decimals = 2
+is_asset_anchored = "true"
+is_unlimited = "true"
+anchor_asset_type = "fiat"
+anchor_asset = "NGN"
+redemption_instructions = "contact Authorized Dealers or signup with KYC info on LINK"
+status = "test"
+image = "https://uploads-ssl.webflow.com/60a70a1080cf2974d4b1595e/61961ce43c530394bcb05349_NGRC.png"
